@@ -1,0 +1,2195 @@
+@import url('https://fonts.googleapis.com/css?family=Space+Mono&display=swap');
+
+* {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  overflow-y: hidden;
+}
+
+/* this is the title css */
+.background {
+  width: 280vh;
+  height: 108vh;
+  background-color: rgba(0, 0, 10, 1);
+  background-image:
+    radial-gradient(white, rgba(255, 255, 255, .2) 2px, transparent 40px),
+    radial-gradient(white, rgba(255, 255, 255, .15) 1px, transparent 30px),
+    radial-gradient(white, rgba(255, 255, 255, .1) 2px, transparent 40px),
+    radial-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, .1) 2px, transparent 30px);
+  background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+  background-position: fixed;
+  overflow-y: hidden;
+  /*0 0, 40px 60px, 130px 270px, 70px 100px;*/
+}
+
+.arrow {
+  font-family: space mono;
+  color: white;
+  font-size: 30pt;
+  position: fixed;
+  left: 1345px;
+  top: -45px;
+}
+
+.exp {
+  position: fixed;
+  left: 1153px;
+  top: 16px;
+  font-size: 12pt;
+  font-family: space mono;
+  color: white;
+  width: 200px;
+}
+
+.key {
+  left: 180px;
+  text-align: left;
+  position: fixed;
+  color: white;
+  font-size: 12pt;
+  font-family: space mono;
+}
+
+.white {
+  height: 10px;
+  width: 10px;
+  border-radius: 100px;
+  background-image: radial-gradient(white 82%, transparent 99%);
+  position: fixed;
+  left: 250px;
+  top: 25px;
+}
+
+.yellow {
+  height: 10px;
+  width: 10px;
+  border-radius: 100px;
+  background-image: radial-gradient(yellow 82%, transparent 99%);
+  position: fixed;
+  left: 360px;
+  top: 25px;
+}
+
+.pink {
+  height: 10px;
+  width: 10px;
+  border-radius: 100px;
+  background-image: radial-gradient(pink 82%, transparent 99%);
+  position: fixed;
+  left: 510px;
+  top: 25px;
+}
+
+.blue {
+  height: 10px;
+  width: 10px;
+  border-radius: 100px;
+  background-image: radial-gradient(lightblue 82%, transparent 99%);
+  position: fixed;
+  left: 650px;
+  top: 25px;
+}
+
+.orange {
+  height: 10px;
+  width: 10px;
+  border-radius: 100px;
+  background-image: radial-gradient(orange 82%, transparent 99%);
+  position: fixed;
+  left: 800px;
+  top: 25px;
+}
+
+.green {
+  height: 10px;
+  width: 10px;
+  border-radius: 100px;
+  background-image: radial-gradient(lightgreen 82%, transparent 99%);
+  position: fixed;
+  left: 970px;
+  top: 25px;
+}
+
+.white-text {
+  font-size: 12pt;
+  font-family: space mono;
+  color: white;
+  position: fixed;
+  left: 270px;
+}
+
+.yellow-text {
+  font-size: 12pt;
+  font-family: space mono;
+  color: white;
+  position: fixed;
+  left: 380px;
+}
+
+.pink-text {
+  font-size: 12pt;
+  font-family: space mono;
+  color: white;
+  position: fixed;
+  left: 530px;
+}
+
+.blue-text {
+  font-size: 12pt;
+  font-family: space mono;
+  color: white;
+  position: fixed;
+  left: 670px;
+}
+
+.orange-text {
+  font-size: 12pt;
+  font-family: space mono;
+  color: white;
+  position: fixed;
+  left: 820px;
+}
+
+.green-text {
+  font-size: 12pt;
+  font-family: space mono;
+  color: white;
+  position: fixed;
+  left: 990px;
+}
+
+/* this is the index css */
+.counter {
+  font-family: space mono;
+  font-size: 150pt;
+  font-weight: normal;
+  font-variant-ligatures: normal;
+  color: white;
+  position: fixed;
+  bottom: -40px;
+  left: 60px;
+}
+
+.h2 {
+  font-size: 14pt;
+  font-weight: bold;
+}
+
+.space {
+  width: 25000000px;
+  background: linear-gradient(to right, rgba(6, 0, 40, 1) 0%, rgba(0, 0, 0, 1) 100%),
+    radial-gradient(white, rgba(255, 255, 255, .15) 1px, transparent 30px),
+    radial-gradient(white, rgba(255, 255, 255, .1) 2px, transparent 40px),
+    radial-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, .1) 2px, transparent 30px);
+  background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+  height: 98vh;
+  overflow-y: hidden;
+}
+
+.stellar-bodies {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  overflow-y: hidden;
+}
+
+.milkyway {
+  height: 600px;
+  width: 600px;
+  /* 1/2 the hieght and width = ellipse */
+  border-radius: 600px;
+  background-image: radial-gradient(black 3%, rgba(11, 0, 50, 1) 5%, white 50%, rgba(11, 0, 50, 1)70%, transparent 100%);
+  /* this is to put it in a direct position on the page */
+  /* there might be chance that this needs to be position:absolute. in that case make the .stellar bodies posiiton:relative */
+  position: absolute;
+  /* how far from the left it should be  */
+  left: 0px;
+  padding: 10px;
+}
+
+.milkyway:hover>.mw-info {
+  opacity: 1;
+}
+
+.mw-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 300px;
+  left: 80px;
+  top: -70px;
+  border: 20px white;
+  opacity: 0;
+}
+
+.earth {
+  height: 10px;
+  width: 10px;
+  border-radius: 200px;
+  background-image: radial-gradient(darkblue 12%, green 42%, transparent 49%);
+  position: absolute;
+  left: 183px;
+}
+
+.earth-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -360px;
+  left: -20px;
+  opacity: 0;
+}
+
+.earth:hover>.earth-info {
+  opacity: 1;
+}
+
+.canis {
+  height: 10px;
+  width: 10px;
+  border-radius: 200px;
+  background-image: radial-gradient(white 3%, rgba(11, 0, 50, 1) 5%, pink 42%, transparent 99%);
+  position: absolute;
+  left: 83px;
+}
+
+.canis:hover>.canis-info {
+  opacity: 1;
+}
+
+.canis-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 300px;
+  top: -365px;
+  opacity: 0;
+}
+
+.segue1 {
+  height: 10px;
+  width: 10px;
+  border-radius: 200px;
+  background-image: radial-gradient(white 3%, rgba(11, 0, 50, 1) 5%, lightblue 12%, transparent 99%);
+  position: absolute;
+  left: 250px;
+}
+
+.segue1:hover>.segue1-info {
+  opacity: 1;
+}
+
+.segue1-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -365px;
+  opacity: 0;
+}
+
+.sagittarius {
+  height: 33px;
+  width: 33px;
+  border-radius: 330px;
+  background-image: radial-gradient(black 3%, rgba(11, 0, 50, 1) 5%, lightblue 50%, rgba(11, 0, 50, 1)70%, transparent 100%);
+  position: absolute;
+  left: 270px;
+}
+
+.sagittarius:hover>.sag-info {
+  opacity: 1;
+}
+
+.sag-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -365px;
+  opacity: 0;
+}
+
+.ursa2 {
+  height: 6px;
+  width: 6px;
+  border-radius: 200px;
+  background-image: radial-gradient(black 3%, rgba(11, 0, 50, 1) 5%, lightblue 50%, rgba(11, 0, 50, 1)70%, transparent 100%);
+  position: absolute;
+  left: 306px;
+  padding: 20px;
+}
+
+.ursa2:hover>.ursa2-info {
+  opacity: 1;
+}
+
+.ursa2-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -365px;
+  opacity: 0;
+}
+
+.ret {
+  height: 1px;
+  width: 1px;
+  border-radius: 200px;
+  background-image: radial-gradient(white 3%, rgba(11, 0, 50, 1) 5%, lightblue 50%, transparent 99%);
+  position: absolute;
+  padding: 10px;
+  left: 326px;
+}
+
+.ret:hover>.ret-info {
+  opacity: 1;
+}
+
+.ret-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -365px;
+  opacity: 0;
+}
+
+.tri2 {
+  height: 10px;
+  width: 10px;
+  border-radius: 200px;
+  background-image: radial-gradient(white 3%, rgba(11, 0, 50, 1) 5%, lightblue 50%, transparent 99%);
+  position: absolute;
+  left: 340px;
+}
+
+.tri2:hover>.tri2-info {
+  opacity: 1;
+}
+
+.tri2-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -365px;
+  opacity: 0;
+}
+
+.segue2 {
+  height: 7px;
+  width: 7px;
+  border-radius: 200px;
+  background-image: radial-gradient(white 3%, rgba(11, 0, 50, 1) 5%, orange 50%, transparent 99%);
+  position: absolute;
+  left: 380px;
+}
+
+.segue2:hover>.segue2-info {
+  opacity: 1;
+}
+
+.segue2-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -365px;
+  opacity: 0;
+}
+
+/*dwarfs start here */
+.will {
+  height: 10px;
+  width: 10px;
+  border-radius: 200px;
+  background-image: radial-gradient(white 3%, rgba(11, 0, 50, 1) 5%, orange 50%, transparent 99%);
+  position: absolute;
+  left: 400px;
+}
+
+.will:hover>.will-info {
+  opacity: 1;
+}
+
+.will-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -365px;
+  opacity: 0;
+}
+
+.boots2 {
+  height: 10px;
+  width: 10px;
+  border-radius: 200px;
+  background-image: radial-gradient(white 3%, rgba(11, 0, 50, 1) 5%, lightblue 50%, transparent 99%);
+  position: absolute;
+  left: 453px;
+}
+
+.boots2:hover>.boots2-info {
+  opacity: 1;
+}
+
+.boots2-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -365px;
+  opacity: 0;
+}
+
+.coma {
+  height: 10px;
+  width: 10px;
+  border-radius: 200px;
+  background-image: radial-gradient(white 3%, rgba(11, 0, 50, 1) 5%, lightblue 50%, transparent 99%);
+  position: absolute;
+  left: 453px;
+}
+
+.coma:hover>.coma-info {
+  opacity: 1;
+}
+
+.coma-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -365px;
+  opacity: 0;
+}
+
+.boots3 {
+  height: 10px;
+  width: 10px;
+  border-radius: 200px;
+  background-image: radial-gradient(white 3%, rgba(11, 0, 50, 1) 5%, lightblue 50%, transparent 99%);
+  position: absolute;
+  left: 500px;
+}
+
+.boots3:hover>.boots3-info {
+  opacity: 1;
+}
+
+.boots3-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -365px;
+  opacity: 0;
+}
+
+/*dwarfs end */
+.LMC {
+  height: 47px;
+  width: 47px;
+  border-radius: 200px;
+  background-image: repeating-radial-gradient(black 3%, rgba(11, 0, 50, 1) 5%, pink 55%, rgba(11, 0, 50, 1)75%, transparent 80%);
+  padding: 30px;
+  position: absolute;
+  left: 543px;
+}
+
+.LMC:hover>.LMC-info {
+  opacity: 1;
+}
+
+.LMC-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -345px;
+  opacity: 0;
+}
+
+.boots1 {
+  height: 10px;
+  width: 10px;
+  border-radius: 200px;
+  background-image: radial-gradient(white 3%, rgba(11, 0, 50, 1) 5%, lightblue 50%, transparent 99%);
+  position: absolute;
+  left: 656px;
+}
+
+.boots1:hover>.boots1-info {
+  opacity: 1;
+}
+
+.boots1-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -365px;
+  opacity: 0;
+}
+
+.SMC {
+  height: 23px;
+  width: 23px;
+  border-radius: 200px;
+  background-image: radial-gradient(black 3%, rgba(11, 0, 50, 1) 5%, white 50%, rgba(11, 0, 50, 1)70%, transparent 100%);
+  padding: 30px;
+  position: absolute;
+  left: 686px;
+}
+
+.SMC:hover>.SMC-info {
+  opacity: 1;
+}
+
+.SMC-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -345px;
+  opacity: 0;
+}
+
+.ursadwarf {
+  height: 7px;
+  width: 7px;
+  border-radius: 200px;
+  background-image: radial-gradient(white 3%, rgba(11, 0, 50, 1) 5%, yellow 50%, transparent 99%);
+  position: absolute;
+  left: 656px;
+}
+
+.ursadwarf:hover>.ursadwarf-info {
+  opacity: 1;
+}
+
+.ursadwarf-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -365px;
+  opacity: 0;
+}
+
+.draco {
+  height: 6px;
+  width: 6px;
+  border-radius: 200px;
+  background-image: radial-gradient(black 3%, rgba(11, 0, 50, 1) 5%, white 50%, rgba(11, 0, 50, 1)70%, transparent 100%);
+  padding: 30px;
+  position: absolute;
+  left: 860px;
+}
+
+.draco:hover>.draco-info {
+  opacity: 1;
+}
+
+.draco-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -345px;
+  opacity: 0;
+}
+
+.pisces1 {
+  height: 10px;
+  width: 10px;
+  border-radius: 200px;
+  background-image: radial-gradient(white 3%, rgba(11, 0, 50, 1) 5%, pink 50%, transparent 99%);
+  position: absolute;
+  left: 866px;
+}
+
+.pisces1:hover>.pisces1-info {
+  opacity: 1;
+}
+
+.pisces1-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -365px;
+  opacity: 0;
+}
+
+.sextans {
+  height: 28px;
+  width: 28px;
+  border-radius: 200px;
+  background-image: radial-gradient(black 3%, rgba(11, 0, 50, 1) 5%, lightblue 50%, rgba(11, 0, 50, 1)70%, transparent 100%);
+  padding: 30px;
+  position: absolute;
+  left: 937px;
+}
+
+.sextans:hover>.sextans-info {
+  opacity: 1;
+}
+
+.sextans-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -345px;
+  opacity: 0;
+}
+
+.virgo {
+  height: 10px;
+  width: 10px;
+  border-radius: 200px;
+  background-image: radial-gradient(white 3%, rgba(11, 0, 50, 1) 5%, lightblue 50%, transparent 99%);
+  position: absolute;
+  left: 936px;
+}
+
+.virgo:hover>.virgo-info {
+  opacity: 1;
+}
+
+.virgo-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -365px;
+  opacity: 0;
+}
+
+.sculptor {
+  height: 10px;
+  width: 10px;
+  border-radius: 200px;
+  background-image: radial-gradient(white 3%, rgba(11, 0, 50, 1) 5%, lightblue 50%, transparent 99%);
+  position: absolute;
+  left: 956px;
+}
+
+.sculptor:hover>.sculptor-info {
+  opacity: 1;
+}
+
+.sculptor-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -365px;
+  opacity: 0;
+}
+
+.ursa1 {
+  height: 7px;
+  width: 7px;
+  border-radius: 200px;
+  background-image: radial-gradient(black 3%, rgba(11, 0, 50, 1) 5%, lightblue 50%, rgba(11, 0, 50, 1)70%, transparent 100%);
+  padding: 30px;
+  position: absolute;
+  left: 1100px;
+}
+
+.ursa1:hover>.ursa1-info {
+  opacity: 1;
+}
+
+.ursa1-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -365px;
+  opacity: 0;
+}
+
+.carina {
+  height: 5px;
+  width: 5px;
+  border-radius: 200px;
+  background-image: radial-gradient(black 3%, rgba(11, 0, 50, 1) 5%, lightblue 50%, rgba(11, 0, 50, 1)70%, transparent 100%);
+  padding: 30px;
+  position: absolute;
+  left: 1100px;
+}
+
+.carina:hover>.carina-info {
+  opacity: 1;
+}
+
+.carina-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -345px;
+  opacity: 0;
+}
+
+/*dwarfs start here */
+.crater {
+  height: 10px;
+  width: 10px;
+  border-radius: 200px;
+  background-image: radial-gradient(white 3%, rgba(11, 0, 50, 1) 5%, lightblue 50%, transparent 99%);
+  position: absolute;
+  left: 1276px;
+}
+
+.crater:hover>.crater-info {
+  opacity: 1;
+}
+
+.crater-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -365px;
+  opacity: 0;
+}
+
+.ant {
+  height: 10px;
+  width: 10px;
+  border-radius: 200px;
+  background-image: radial-gradient(white 3%, rgba(11, 0, 50, 1) 5%, lightblue 50%, transparent 99%);
+  position: absolute;
+  left: 1406px;
+}
+
+.ant:hover>.ant-info {
+  opacity: 1;
+}
+
+.ant-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -365px;
+  opacity: 0;
+}
+
+.herc {
+  height: 10px;
+  width: 10px;
+  border-radius: 200px;
+  background-image: radial-gradient(white 3%, rgba(11, 0, 50, 1) 5%, lightblue 50%, transparent 99%);
+  position: relative;
+  left: 1433px;
+}
+
+.herc:hover>.herc-info {
+  opacity: 1;
+}
+
+.herc-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -365px;
+  opacity: 0;
+}
+
+.fornax {
+  height: 10px;
+  width: 10px;
+  border-radius: 200px;
+  background-image: radial-gradient(white 3%, rgba(11, 0, 50, 1) 5%, lightblue 50%, transparent 99%);
+  position: relative;
+  left: 1533px;
+}
+
+.fornax:hover>.fornax-info {
+  opacity: 1;
+}
+
+.fornax-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -365px;
+  opacity: 0;
+}
+
+.canes {
+  height: 10px;
+  width: 10px;
+  border-radius: 200px;
+  background-image: radial-gradient(white 3%, rgba(11, 0, 50, 1) 5%, lightblue 50%, transparent 99%);
+  position: absolute;
+  left: 1633px;
+}
+
+.canes:hover>.canes-info {
+  opacity: 1;
+}
+
+.canes-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -365px;
+  opacity: 0;
+}
+
+.leo4 {
+  height: 10px;
+  width: 10px;
+  border-radius: 200px;
+  background-image: radial-gradient(white 3%, rgba(11, 0, 50, 1) 5%, lightblue 50%, transparent 99%);
+  position: absolute;
+  left: 1673px;
+}
+
+.leo4:hover>.leo4-info {
+  opacity: 1;
+}
+
+.leo4-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -365px;
+  opacity: 0;
+}
+
+.leo5 {
+  height: 10px;
+  width: 10px;
+  border-radius: 200px;
+  background-image: radial-gradient(white 3%, rgba(11, 0, 50, 1) 5%, lightblue 50%, transparent 99%);
+  position: absolute;
+  left: 1900px;
+}
+
+.leo5:hover>.leo5-info {
+  opacity: 1;
+}
+
+.leo5-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -365px;
+  opacity: 0;
+}
+
+.pisces2 {
+  height: 10px;
+  width: 10px;
+  border-radius: 200px;
+  background-image: radial-gradient(white 3%, rgba(11, 0, 50, 1) 5%, lightblue 50%, transparent 99%);
+  position: absolute;
+  left: 1986px;
+}
+
+.pisces2:hover>.pisces2-info {
+  opacity: 1;
+}
+
+.pisces2-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -365px;
+  opacity: 0;
+}
+
+/*dwarfs end here*/
+.leo2 {
+  height: 14px;
+  width: 14px;
+  border-radius: 200px;
+  background-image: radial-gradient(black 3%, rgba(11, 0, 50, 1) 5%, lightblue 50%, rgba(11, 0, 50, 1)70%, transparent 100%);
+  position: absolute;
+  left: 2336px;
+}
+
+.leo2:hover>.leo2-info {
+  opacity: 1;
+}
+
+.leo2-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -365px;
+  opacity: 0;
+}
+
+.canes1 {
+  height: 10px;
+  width: 10px;
+  border-radius: 200px;
+  background-image: radial-gradient(white 3%, rgba(11, 0, 50, 1) 5%, lightblue 50%, transparent 99%);
+  position: absolute;
+  left: 2370px;
+}
+
+.canes1:hover>.canes1-info {
+  opacity: 1;
+}
+
+.canes1-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -365px;
+  opacity: 0;
+}
+
+.leo1 {
+  height: 10px;
+  width: 10px;
+  border-radius: 200px;
+  background-image: radial-gradient(white 3%, rgba(11, 0, 50, 1) 5%, lightblue 50%, transparent 99%);
+  position: absolute;
+  left: 2733px;
+}
+
+.leo1:hover>.leo1-info {
+  opacity: 1;
+}
+
+.leo1-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -365px;
+  opacity: 0;
+}
+
+.leoT {
+  height: 8px;
+  width: 8px;
+  border-radius: 200px;
+  background-image: radial-gradient(black 3%, rgba(11, 0, 50, 1) 5%, pink 50%, rgba(11, 0, 50, 1)70%, transparent 100%);
+  position: absolute;
+  left: 4566px;
+}
+
+.leoT:hover>.leoT-info {
+  opacity: 1;
+}
+
+.leoT-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -365px;
+  opacity: 0;
+}
+
+.phoenix {
+  height: 10px;
+  width: 10px;
+  border-radius: 200px;
+  background-image: radial-gradient(white 3%, rgba(11, 0, 50, 1) 5%, pink 50%, transparent 99%);
+  position: absolute;
+  left: 4800px;
+}
+
+.phoenix:hover>.phoenix-info {
+  opacity: 1;
+}
+
+.phoenix-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -365px;
+  opacity: 0;
+}
+
+.barnard {
+  height: 23px;
+  width: 23px;
+  border-radius: 200px;
+  background-image: radial-gradient(black 3%, rgba(11, 0, 50, 1) 5%, pink 50%, rgba(11, 0, 50, 1)70%, transparent 100%);
+  position: absolute;
+  left: 5433px;
+}
+
+.barnard:hover>.barnard-info {
+  opacity: 1;
+}
+
+.barnard-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -355px;
+  opacity: 0;
+}
+
+/* lots of tiny galaxies here*/
+.ngc1 {
+  height: 10px;
+  width: 10px;
+  border-radius: 200px;
+  background-image: radial-gradient(white 3%, rgba(11, 0, 50, 1) 5%, lightblue 50%, transparent 99%);
+  position: absolute;
+  left: 6700px;
+}
+
+.ngc1:hover>.ngc1-info {
+  opacity: 1;
+}
+
+.ngc1-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -365px;
+  opacity: 0;
+}
+
+.and2 {
+  height: 10px;
+  width: 10px;
+  border-radius: 200px;
+  background-image: radial-gradient(white 3%, rgba(11, 0, 50, 1) 5%, lightblue 50%, transparent 99%);
+  position: absolute;
+  left: 7100px;
+}
+
+.and2:hover>.and2-info {
+  opacity: 1;
+}
+
+.and2-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -365px;
+  opacity: 0;
+}
+
+.ic {
+  height: 10px;
+  width: 10px;
+  border-radius: 200px;
+  background-image: radial-gradient(white 3%, rgba(11, 0, 50, 1) 5%, pink 50%, transparent 99%);
+  position: absolute;
+  left: 7333px;
+}
+
+.ic:hover>.ic-info {
+  opacity: 1;
+}
+
+.ic-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -365px;
+  opacity: 0;
+}
+
+.ngc2 {
+  height: 10px;
+  width: 10px;
+  border-radius: 200px;
+  background-image: radial-gradient(white 3%, rgba(11, 0, 50, 1) 5%, lightblue 50%, transparent 99%);
+  position: absolute;
+  left: 7333px;
+}
+
+.ngc2:hover>.ngc2-info {
+  opacity: 1;
+}
+
+.ngc2-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -365px;
+  opacity: 0;
+}
+
+.leoA {
+  height: 10px;
+  width: 10px;
+  border-radius: 200px;
+  background-image: radial-gradient(white 3%, rgba(11, 0, 50, 1) 5%, lightblue 50%, transparent 99%);
+  position: absolute;
+  left: 7333px;
+}
+
+.leoA:hover>.leoA-info {
+  opacity: 1;
+}
+
+.leoA-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  opacity: 0;
+  top: -365px;
+}
+
+.ic2 {
+  height: 10px;
+  width: 10px;
+  border-radius: 200px;
+  background-image: radial-gradient(white 3%, rgba(11, 0, 50, 1) 5%, pink 50%, transparent 99%);
+  position: absolute;
+  left: 7833px;
+}
+
+.ic2:hover>.ic2-info {
+  opacity: 1;
+}
+
+.ic2-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -365px;
+  opacity: 0;
+}
+
+.and11 {
+  height: 10px;
+  width: 10px;
+  border-radius: 200px;
+  background-image: radial-gradient(white 3%, rgba(11, 0, 50, 1) 5%, lightblue 50%, transparent 99%);
+  position: absolute;
+  left: 8033px;
+}
+
+.and11:hover>.and11-info {
+  opacity: 1;
+}
+
+.and11-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -365px;
+  opacity: 0;
+}
+
+.and1 {
+  height: 10px;
+  width: 10px;
+  border-radius: 200px;
+  background-image: radial-gradient(white 3%, rgba(11, 0, 50, 1) 5%, lightblue 50%, transparent 99%);
+  position: absolute;
+  left: 8100px;
+}
+
+.and1:hover>.and1-info {
+  opacity: 1;
+}
+
+.and1-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -365px;
+  opacity: 0;
+}
+
+.and3 {
+  height: 10px;
+  width: 10px;
+  border-radius: 200px;
+  background-image: radial-gradient(white 3%, rgba(11, 0, 50, 1) 5%, lightblue 50%, transparent 99%);
+  position: absolute;
+  left: 8133px;
+}
+
+.and3:hover>.and3-info {
+  opacity: 1;
+}
+
+.and3-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -365px;
+  opacity: 0;
+}
+
+.cetus {
+  height: 10px;
+  width: 10px;
+  border-radius: 200px;
+  background-image: radial-gradient(white 3%, rgba(11, 0, 50, 1) 5%, lightblue 50%, transparent 99%);
+  position: absolute;
+  left: 8200px;
+}
+
+.cetus:hover>.cetus-info {
+  opacity: 1;
+}
+
+.cetus-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -365px;
+  opacity: 0;
+}
+
+/* lots of tiny galaxies ends here*/
+.m32 {
+  height: 22px;
+  width: 22px;
+  border-radius: 200px;
+  background-image: radial-gradient(black 3%, rgba(11, 0, 50, 1) 5%, pink 50%, rgba(11, 0, 50, 1)70%, transparent 100%);
+  padding: 30px;
+  position: absolute;
+  left: 8296px;
+}
+
+.m32:hover>.m32-info {
+  opacity: 1;
+}
+
+.m32-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -340px;
+  opacity: 0;
+}
+
+/*some more tinies*/
+.cass {
+  height: 10px;
+  width: 10px;
+  border-radius: 200px;
+  background-image: radial-gradient(white 3%, rgba(11, 0, 50, 1) 5%, lightblue 50%, transparent 99%);
+  position: absolute;
+  left: 8300px;
+}
+
+.cass:hover>.cass-info {
+  opacity: 1;
+}
+
+.cass-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -365px;
+  opacity: 0;
+}
+
+.and9 {
+  height: 10px;
+  width: 10px;
+  border-radius: 200px;
+  background-image: radial-gradient(white 3%, rgba(11, 0, 50, 1) 5%, pink 50%, transparent 99%);
+  position: absolute;
+  left: 8333px;
+}
+
+.and9:hover>.and9-info {
+  opacity: 1;
+}
+
+.and9-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -365px;
+  opacity: 0;
+}
+
+.piscesd {
+  height: 10px;
+  width: 10px;
+  border-radius: 200px;
+  background-image: radial-gradient(white 3%, rgba(11, 0, 50, 1) 5%, lightblue 50%, transparent 99%);
+  position: absolute;
+  left: 8367px;
+}
+
+.piscesd:hover>.piscesd-info {
+  opacity: 1;
+}
+
+.piscesd-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -365px;
+  opacity: 0;
+}
+
+.and5 {
+  height: 10px;
+  width: 10px;
+  border-radius: 200px;
+  background-image: radial-gradient(white 3%, rgba(11, 0, 50, 1) 5%, lightblue 50%, transparent 99%);
+  position: absolute;
+  left: 8400px;
+}
+
+.and5:hover>.and5-info {
+  opacity: 1;
+}
+
+.and5-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -365px;
+  opacity: 0;
+}
+
+/*end tiny galaxies to andromeda*/
+.anda:hover>.anda-info {
+  opacity: 1;
+}
+
+.anda-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  left: 200px;
+  top: 10px;
+  opacity: 0;
+}
+
+.anda {
+  height: 740px;
+  width: 740px;
+  border-radius: 900px;
+  background-image: radial-gradient(black 3%, rgba(11, 0, 50, 1) 5%, white 50%, rgba(11, 0, 50, 1)70%, transparent 100%);
+  padding: 30px;
+  position: absolute;
+  left: 8467px;
+  overflow-y: hidden;
+}
+
+/*tinies to triangulum*/
+.peg {
+  height: 10px;
+  width: 10px;
+  border-radius: 200px;
+  background-image: radial-gradient(white 3%, rgba(11, 0, 50, 1) 5%, lightblue 50%, transparent 99%);
+  position: absolute;
+  left: 8500px;
+}
+
+.peg:hover>.peg-info {
+  opacity: 1;
+}
+
+.peg-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  top: -365px;
+  width: 350px;
+  opacity: 0;
+}
+
+.m110 {
+  height: 10px;
+  width: 10px;
+  border-radius: 200px;
+  background-image: radial-gradient(white 3%, rgba(11, 0, 50, 1) 5%, lightyellow 50%, transparent 99%);
+  position: absolute;
+  left: 8900px;
+}
+
+.m110:hover>.m110-info {
+  opacity: 1;
+}
+
+.m110-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -365px;
+  opacity: 0;
+}
+
+.and13 {
+  height: 10px;
+  width: 10px;
+  border-radius: 200px;
+  background-image: radial-gradient(white 3%, rgba(11, 0, 50, 1) 5%, pink 50%, transparent 99%);
+  position: absolute;
+  left: 9000px;
+}
+
+.and13:hover>.and13-info {
+  opacity: 1;
+}
+
+.and13-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -365px;
+  opacity: 0;
+}
+
+/*end tiny galaxies to triangulum*/
+/* m33 is the triangulum galaxy vv */
+.m33 {
+  height: 200px;
+  width: 200px;
+  border-radius: 200px;
+  background-image: radial-gradient(black 3%, rgba(11, 0, 50, 1) 5%, white 50%, rgba(11, 0, 50, 1)60%, transparent 65%);
+  padding: 30px;
+  position: absolute;
+  left: 9100px;
+}
+
+.m33:hover>.m33-info {
+  opacity: 1;
+}
+
+.m33-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -280px;
+  opacity: 0;
+}
+
+.andXX {
+  height: 43px;
+  width: 43px;
+  border-radius: 200px;
+  background-image: radial-gradient(black 3%, rgba(11, 0, 50, 1) 5%, lightyellow 50%, rgba(11, 0, 50, 1)70%, transparent 100%);
+  position: absolute;
+  left: 9566px;
+}
+
+.andXX:hover>.andXX-info {
+  opacity: 1;
+}
+
+.andXX-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -345px;
+  opacity: 0;
+}
+
+/*tinies to andXIX*/
+.tucana {
+  height: 10px;
+  width: 10px;
+  border-radius: 200px;
+  background-image: radial-gradient(white 3%, rgba(11, 0, 50, 1) 5%, lightyellow 50%, transparent 99%);
+  position: absolute;
+  left: 9566px;
+}
+
+.tucana:hover>.tucana-info {
+  opacity: 1;
+}
+
+.tucana-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -365px;
+  opacity: 0;
+}
+
+.andX {
+  height: 10px;
+  width: 10px;
+  border-radius: 200px;
+  background-image: radial-gradient(white 3%, rgba(11, 0, 50, 1) 5%, pink 50%, transparent 99%);
+  position: absolute;
+  left: 9667px;
+}
+
+.andX:hover>.andX-info {
+  opacity: 1;
+}
+
+.andX-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -365px;
+  opacity: 0;
+}
+
+.pegIrr {
+  height: 10px;
+  width: 10px;
+  border-radius: 200px;
+  background-image: radial-gradient(white 3%, rgba(11, 0, 50, 1) 5%, pink 50%, transparent 99%);
+  position: absolute;
+  left: 10000px;
+}
+
+.pegIrr:hover>.pegIrr-info {
+  opacity: 1;
+}
+
+.pegIrr-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -365px;
+  opacity: 0;
+}
+
+.wolf {
+  height: 10px;
+  width: 10px;
+  border-radius: 200px;
+  background-image: radial-gradient(white 3%, rgba(11, 0, 50, 1) 5%, pink 50%, transparent 99%);
+  position: relative;
+  left: 10133px;
+}
+
+.wolf:hover>.wolf-info {
+  opacity: 1;
+}
+
+.wolf-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -365px;
+  opacity: 0;
+}
+
+/*end tiny galaxies to andX*/
+.andXIX {
+  height: 7px;
+  width: 7px;
+  border-radius: 200px;
+  background-image: radial-gradient(black 3%, rgba(11, 0, 50, 1) 5%, lightgreen 50%, rgba(11, 0, 50, 1)70%, transparent 100%);
+  padding: 30px;
+  position: relative;
+  left: 10133px;
+}
+
+.andXIX:hover>.andXIX-info {
+  opacity: 1;
+}
+
+.andXIX-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -340px;
+  opacity: 0;
+}
+
+.andXXII {
+  height: 7px;
+  width: 7px;
+  border-radius: 200px;
+  background-image: radial-gradient(black 3%, rgba(11, 0, 50, 1) 5%, lightblue 50%, rgba(11, 0, 50, 1)70%, transparent 100%);
+  padding: 30px;
+  position: absolute;
+  left: 10733px;
+}
+
+.andXXII:hover>.andXXII-info {
+  opacity: 1;
+}
+
+.andXXII-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -340px;
+  opacity: 0;
+}
+
+/*tiny*/
+.SAG {
+  height: 10px;
+  width: 10px;
+  border-radius: 200px;
+  background-image: radial-gradient(white 3%, rgba(11, 0, 50, 1) 5%, pink 50%, transparent 99%);
+  position: absolute;
+  left: 11300px;
+}
+
+.SAG:hover>.SAG-info {
+  opacity: 1;
+}
+
+.SAG-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -365px;
+  opacity: 0;
+}
+
+.aq {
+  height: 10px;
+  width: 10px;
+  border-radius: 200px;
+  background-image: radial-gradient(white 3%, rgba(11, 0, 50, 1) 5%, pink 50%, transparent 99%);
+  position: absolute;
+  left: 11633px;
+}
+
+.aq:hover>.aq-info {
+  opacity: 1;
+}
+
+.aq-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -365px;
+  opacity: 0;
+}
+
+/*end tiny*/
+.UGC {
+  height: 10px;
+  width: 10px;
+  border-radius: 200px;
+  background-image: radial-gradient(black 3%, rgba(11, 0, 50, 1) 5%, pink 50%, rgba(11, 0, 50, 1)70%, transparent 100%);
+  padding: 30px;
+  position: absolute;
+  left: 13934px;
+}
+
+.UGC:hover>.UGC-info {
+  opacity: 1;
+}
+
+.UGC-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -340px;
+  opacity: 0;
+}
+
+.localend p {
+  font-family: space mono;
+  font-size: 100pt;
+  font-weight: normal;
+  text-align: right;
+  color: white;
+  position: relative;
+  left: 33333px;
+  top:-20px;
+}
+
+.localend:hover>.localend-info {
+  opacity: 1;
+}
+
+.localend-info {
+
+  position: absolute;
+  padding-top: 400px;
+  left: 35200px;
+}
+
+.hubble-info {
+
+  position: absolute;
+  padding-top: 400px;
+  left: 36300px;
+}
+
+.cigar {
+  top:200px;
+  height: 323px;
+  width: 323px;
+  border-radius: 500px;
+  background-image: radial-gradient(white 3%, rgba(11, 0, 50, 1) 5%, lightblue 48%, red 60%, rgba(11, 0, 50, 1)70%, transparent 100%);
+  position: absolute;
+  left: 38333px;
+}
+
+.cigar:hover>.cigar-info {
+  opacity: 1;
+}
+
+.cigar-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -130px;
+  left: 450px;
+  opacity: 0;
+}
+
+.pin {
+  top:100px;
+  height: 566px;
+  width: 566px;
+  border-radius: 1200px;
+  background-image: radial-gradient(gold 1%, rgba(11, 0, 50, 1) 4%, lightblue 13%, hotpink 33%, blue 53%, darkblue 55%, rgba(11, 0, 50, 1)70%, transparent 100%);
+  position: absolute;
+  left: 69566px;
+}
+
+.pin:hover>.pin-info {
+  opacity: 1;
+}
+
+.pin-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -20px;
+  left: 500px;
+  opacity: 0;
+}
+
+.sombrero {
+  height: 166px;
+  width: 166px;
+  top:300px;
+  border-radius: 500px;
+  background-image: radial-gradient(white 1%, rgba(11, 0, 50, 1) 5%, blue 23%, darkblue 50%, red 55%, rgba(11, 0, 50, 1)70%, transparent 100%);
+  position: absolute;
+  left: 97833px;
+}
+
+.sombrero:hover>.sombrero-info {
+  opacity: 1;
+}
+
+.sombrero-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+top:-150px;
+  left: 190px;
+  opacity: 0;
+}
+
+.whirl {
+  height: 200px;
+  width: 200px;
+  top:300px;
+  border-radius: 400px;
+  background-image: radial-gradient(yellow 1%, rgba(11, 0, 50, 1) 5%, orange 20%, yellow 30%, darkblue 40%, blue 60%, rgba(11, 0, 50, 1)70%, transparent 100%);
+  position: absolute;
+  left: 100000px;
+}
+
+.whirl:hover>.whirl-info {
+  opacity: 1;
+}
+
+.whirl-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: -185px;
+  left: 240px;
+  opacity: 0;
+}
+
+.NGC1300 {
+  height: 367px;
+  width: 367px;
+  border-radius: 800px;
+  background-image: radial-gradient(purple 1%, rgba(11, 0, 50, 1) 5%, yellow 18%, violet 40%, blue 44%, violet 50%, blue 60%, rgba(11, 0, 50, 1)70%, transparent 100%);
+  position: absolute;
+  left: 203333px;
+}
+
+.NGC1300:hover>.NGC1300-info {
+  opacity: 1;
+}
+
+.NGC1300-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  left: 400px;
+  top: -200px;
+  opacity: 0;
+}
+
+.tad {
+  height: 933px;
+  width: 933px;
+  border-radius: 2000px;
+  background-image: radial-gradient(white 1%, black 3%, rgba(11, 0, 50, 1) 5%, blue 20%, white 55%, lightblue 60%, rgba(11, 0, 50, 1)70%, transparent 100%);
+  position: absolute;
+  left: 1400000px;
+}
+
+.tad:hover>.tad-info {
+  opacity: 1;
+}
+
+.tad-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  top: 90px;
+  left: 970px;
+  opacity: 0;
+}
+
+.hoag {
+  height: 333px;
+  width: 333px;
+  border-radius: 800px;
+  background-image: radial-gradient(gold 10%, rgba(11, 0, 50, 1) 23%, rgba(11, 0, 50, 1) 38%, lightblue 60%, rgba(11, 0, 40, 1)70%, transparent 100%);
+  position: absolute;
+  left: 2000000px;
+}
+
+.hoag:hover>.hoag-info {
+  opacity: 1;
+}
+
+.hoag-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  left: 360px;
+  top: -200px;
+  opacity: 0;
+}
+
+.deepspace p {
+  font-family: space mono;
+  font-size: 100pt;
+  font-weight: normal;
+  text-align: right;
+  color: white;
+  position: relative;
+  left: 2000100px;
+  top:-20px;
+}
+
+.deepspace {
+  left: 2000100px;
+}
+.deepspace-info{
+  position: absolute;
+  left: 2003800px;
+  top:90px;
+
+}
+.far{
+  height: 3px;
+  width: 3px;
+  border-radius: 300px;
+  background-image: radial-gradient(gold 10%, rgba(11, 0, 50, 1) 23%, rgba(11, 0, 50, 1) 38%, lightblue 60%, rgba(11, 0, 40, 1)70%, transparent 100%);
+  position: absolute;
+  left: 43333333px;
+}
+
+.far:hover>.far-info {
+  opacity: 1;
+}
+
+.far-info {
+  font-family: space mono;
+  font-size: 12pt;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  width: 350px;
+  left: 360px;
+  top: -200px;
+  opacity: 0;
+}
+
+/* dropdown */
+.nav {
+  font-size: 12pt;
+  font-family: space mono;
+  color: white;
+  background-color: inherit;
+  position: fixed;
+  left: 30px;
+  top: 16px;
+  overflow: hidden;
+}
+
+a, a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+.nav:hover>.content {
+  opacity: 1;
+}
+
+.content {
+  font-size: 12pt;
+  font-family: space mono;
+  color: white;
+  background-color: inherit;
+  position: fixed;
+  left: 30px;
+  top: 40px;
+  overflow: hidden;
+  opacity: 0;
+}
+
+#anda {
+  left: 8467px;
+}
+
+#localend {
+  left: 33333px;
+}
+
+#cigar {
+  left: 38333px;
+}
+
+#pin {
+  left: 69566px;
+}
+
+#sombrero {
+  left: 97833px;
+}
+
+#whirl {
+  left: 100000px;
+}
+
+#NGC1300 {
+  left: 203333px;
+}
+
+#tad {
+  left: 1400000px;
+}
+
+#hoag {
+  left: 2000000px;
+}
+
+#deepspace {
+  left: 2002100px;
+}

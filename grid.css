@@ -1,0 +1,116 @@
+.grid-parent {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  column-width: 1920px;
+
+}
+
+.background {
+  width: 15000px;
+  height: 98vh;
+  background-color: black;
+  background-image:
+    radial-gradient(white, rgba(255, 255, 255, .2) 2px, transparent 40px),
+    radial-gradient(white, rgba(255, 255, 255, .15) 1px, transparent 30px),
+    radial-gradient(white, rgba(255, 255, 255, .1) 2px, transparent 40px),
+    radial-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, .1) 2px, transparent 30px);
+  background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+  background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+/*  overflow-y: hidden;*/
+}
+
+.h1 {
+  font-size: 20pt;
+  color: white;
+  font-family: space mono;
+}
+
+.arrow {
+  font-family: space mono;
+  color: white;
+  font-size: 40pt;
+  position: fixed;
+  left: 1299px;
+  top: 305px;
+
+}
+
+.hello {
+  grid-column: 1;
+  padding-left: 100px;
+  padding-top:50px;
+  animation-delay: 1s;
+  animation-duration: 6000s;
+  animation-name: fadeInOut;
+  opacity:0;
+
+}
+
+.intro {
+  padding-top:50px;
+  grid-column: 2;
+
+
+}
+
+.title {
+  grid-column: 3;
+  font-size: 200pt;
+  font-family: space mono;
+  font-weight: bold;
+  color: white;
+  left: 800px;
+  width: 4000px;
+  top: 155px;
+  position: relative;
+}
+.S1{
+  padding-top:50px;
+  grid-column: 5;
+
+}
+.S2{
+  padding-top:50px;
+
+  grid-column:6;
+}
+.S3{
+  padding-top:50px;
+
+  grid-column:7;
+}
+
+
+.goto{
+  font-size: 20pt;
+  color: white;
+  font-family: space mono;
+  position: relative;
+  text-align: right;
+  grid-column: 10;
+  top: 320px;
+  width:1500px;
+  right:400px;
+
+
+}
+
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+
+  .01% {
+    opacity: 1;
+  }
+
+
+}
+
+a, a:visited {
+  color: white;
+  text-decoration-style: underline;
+
+
+}
